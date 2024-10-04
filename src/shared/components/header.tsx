@@ -1,4 +1,3 @@
-import { Menu } from "lucide-react"
 import Image from "next/image"
 import { HeaderMobile } from "./header-mobile"
 

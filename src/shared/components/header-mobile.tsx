@@ -2,15 +2,13 @@ import {
   Sheet,
   SheetContent,
   SheetDescription,
-  SheetHeader,
-  SheetTitle,
+
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 
-type Props = {}
 
-export const HeaderMobile = (props: Props) => {
+export const HeaderMobile = () => {
   return (
     <Sheet>
       <SheetTrigger>
