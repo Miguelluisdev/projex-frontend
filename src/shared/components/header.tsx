@@ -7,7 +7,7 @@ import { HeaderMobile } from "./header-mobile"
 export const Header = () => {
   return (
     <>
-      <header className="sticky top-0">
+      <header className="sticky top-0 backdrop-blur-sm z-20">
         <div className="flex justify-center items-center py-3 bg-black text-white text-sm">
           <div className="inline-flex gap-1 items-center"></div>
           <p>
@@ -17,7 +17,7 @@ export const Header = () => {
           </p>
           <ArrowRight className="h-4 w-4 ml-2 inline-flex justify-center items-center" />
         </div>
-        <nav className="py-5">
+        <nav className="py-5 px-3">
           <div className="container">
             <div className="flex items-center justify-between">
               <Link rel="stylesheet" href="/">
