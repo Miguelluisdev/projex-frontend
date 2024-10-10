@@ -7,7 +7,7 @@ import { useRef } from "react"
 
 export default function HeroSection() {
   return (
-    <section className=" h-screen flex items-center bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
+    <section className=" h-full flex items-center bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         <div className=" space-y-6 text-center md:text-left">
           <p className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
@@ -51,7 +51,7 @@ export default function HeroSection() {
             width={400}
             className="w-full h-auto"
             animate={{
-              translateY: [-30, 30],
+              translateY: [-30, 10],
             }}
             transition={{
               repeat: Infinity,
