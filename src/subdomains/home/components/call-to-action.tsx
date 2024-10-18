@@ -1,11 +1,10 @@
 "use client"
 import { Buttons } from "@/shared/components/button"
-import { easeInOut, motion, useScroll, useTransform } from "framer"
-import Image from "next/image"
+import { motion, useScroll, useTransform } from "framer"
 import Link from "next/link"
 import { useRef } from "react"
 
-const CallToAction = () => {
+export   const CallToAction = () => {
   const sectionRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -77,4 +76,4 @@ const CallToAction = () => {
   )
 }
 
-export default CallToAction
+

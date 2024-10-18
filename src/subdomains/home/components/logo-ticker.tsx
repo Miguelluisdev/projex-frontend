@@ -3,7 +3,7 @@ import { logos } from "@/shared/data/logo-ticker-data"
 import { motion } from "framer"
 import Image from "next/image"
 
-const LogoTicker = () => {
+export const LogoTicker = () => {
   return (
     <section className="py-5 bg-white md:py-9">
       <div className="container">
@@ -17,7 +17,7 @@ const LogoTicker = () => {
               duration: 5,
               repeat: Infinity,
               ease: "linear",
-              repeatType: "loop"
+              repeatType: "loop",
             }}
           >
             {logos.map((logo, index) => (
@@ -38,5 +38,3 @@ const LogoTicker = () => {
     </section>
   )
 }
-
-export default LogoTicker

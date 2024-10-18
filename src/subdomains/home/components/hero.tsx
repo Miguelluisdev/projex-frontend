@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRef } from "react"
 
-export default function HeroSection() {
+export  function HeroSection() {
   return (
     <section className=" h-full flex items-center bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
