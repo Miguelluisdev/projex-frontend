@@ -48,13 +48,12 @@ export const Header = () => {
                 >
                   Desenvolvedores
                 </a>
-                <a
-                  href=""
-                  className="text-black/70 hover:text-[#1F3473] transition"
-                >
-                  Projetos
-                </a>
-                <Buttons words="Entrar" />
+                <Link href="/sign-up">
+                  <Buttons words="Criar Conta" />
+                </Link>
+                <Link href="/sign-in">
+                  <Buttons words="Entrar" />
+                </Link>
               </nav>
             </div>
           </div>
