@@ -25,14 +25,16 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "src/subdomains/auth/mutation/create-user.ts"  ],
+    ".next/types/**/*.ts",
+    "src/subdomains/auth/mutation/create-user.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
