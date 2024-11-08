@@ -5,6 +5,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
+import Link from "next/link"
 import { Buttons } from "./button"
 
 export const HeaderMobile = () => {
@@ -29,7 +30,15 @@ export const HeaderMobile = () => {
               <a href="" className="text-black hover:text-[#1F3473] transition">
                 Projetos
               </a>
-              <Buttons words="Entrar" />
+              <Link
+                href="/"
+                className="text-black/70 hover:text-[#1F3473] transition"
+              >
+                Fale com a equipe
+              </Link>
+              <Link href="/sign-in">
+                <Buttons words="Entrar" />
+              </Link>
             </nav>
           </div>
         </SheetDescription>
