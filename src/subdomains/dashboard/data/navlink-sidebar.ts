@@ -11,6 +11,7 @@ import {
   SquareTerminal,
 } from "lucide-react"
 
+//  no teams tirar depois de por a api e os projects apos criar os projetos
 export const data = {
   user: {
     name: "shadcn",
@@ -42,81 +43,77 @@ export const data = {
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "Cromometro",
+          url: "/dashboard/cronometer",
         },
         {
-          title: "Starred",
-          url: "#",
+          title: "Projetos",
+          url: "/dashboard/projects",
         },
         {
-          title: "Settings",
-          url: "#",
+          title: "Graficos",
+          url: "/dashboard/graphics",
         },
       ],
     },
     {
-      title: "Models",
+      title: "Tarefas",
       url: "#",
       icon: Bot,
       items: [
         {
           title: "Genesis",
-          url: "#",
+          url: "/dashboard/genesis",
         },
         {
           title: "Explorer",
-          url: "#",
+          url: "/dashboard/explorer",
         },
         {
           title: "Quantum",
-          url: "#",
+          url: "/dashboard/quantum",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Documentação",
       url: "#",
       icon: BookOpen,
       items: [
         {
           title: "Introduction",
-          url: "#",
+          url: "/dashboard/introduction",
         },
         {
           title: "Get Started",
-          url: "#",
+          url: "/dashboard/started",
         },
         {
           title: "Tutorials",
-          url: "#",
+          url: "/dashboard/tutorials",
         },
         {
           title: "Changelog",
-          url: "#",
+          url: "/dashboard/changelog",
         },
       ],
     },
     {
-      title: "Settings",
+      title: "Configurações",
       url: "#",
       icon: Settings2,
       items: [
         {
-          title: "General",
-          url: "#",
+          title: "Permssões",
+          url: "/dashboard/permission",
         },
         {
-          title: "Team",
-          url: "#",
+          title: "Usuarios",
+          url: "/dashboard/users",
         },
         {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
+          title: "Projetos",
+          url: "/dashboard/projects",
         },
       ],
     },
