@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRef } from "react"
 
-export  function HeroSection() {
+export function HeroSection() {
   return (
     <section className=" h-full flex items-center bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] overflow-x-clip">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
@@ -14,11 +14,11 @@ export  function HeroSection() {
             Open Source
           </p>
           <h1 className="text-5xl md:text-5xl tracking-tighter lg:text-6xl font-bold bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
-            Pathway to productivity
+            Simplifique a Gestão de Projetos
           </h1>
           <p className="text-xl text-[#010D3E] mx-auto tracking-tight mt-6 max-w-md lg:mx-0">
-            Celebrate the joy of accomplishment with an app designed to track
-            your progress, motivate your efforts, and celebrate your successes.
+            Nossa plataforma foi projetada para ajudar você a planejar, executar
+            e concluir projetos com eficiência.
           </p>
           <div className="flex flex-col sm:flex-row gap-1 justify-center lg:justify-start">
             <Link href="#">
@@ -28,7 +28,7 @@ export  function HeroSection() {
               href="#"
               className="text-[#010D3E] px-6 font-semibold  transition duration-300 flex items-center justify-center"
             >
-              Learn more
+              Ver mais
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 ml-2"
