@@ -20,7 +20,7 @@ export const AuthFields: Formstype[] = [
     label: "Senha",
   },
   {
-    name: "password",
+    name: "confirm-password",
     type: "password",
     placeholder: "confirmar senha",
     label: " Confirmar senha",
