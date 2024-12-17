@@ -18,7 +18,7 @@ interface CustomImageProps
 
 const CustomImage = (props: CustomImageProps) => {
   return (
-    <div>
+    <aside>
       <Image
         src={props.src}
         width={props.width}
@@ -27,7 +27,7 @@ const CustomImage = (props: CustomImageProps) => {
         alt={props.alt}
         className={cn("", props.className)}
       />
-    </div>
+    </aside>
   )
 }
 
