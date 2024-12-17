@@ -1,47 +1,68 @@
-import { Leaf } from "lucide-react"
+import { Leaf } from "lucide-react";
 
-export  function CardInfo() {
+export function CardInfo() {
   return (
-    <div className=" bg-white text-black min-h-screen flex items-center justify-center p-4">
-      <div className="max-w-6xl w-full space-y-8">
-        <div className="text-center space-y-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-            Everything you need
-          </h2>
-          <p className="text-sm sm:text-base max-w-2xl mx-auto">
-            Enjoy customizable lists, team work tools, and smart tracking all in
-            one place. Set tasks, get reminders, and see your progress simply
-            and quickly.
+    <main className="bg-white text-black min-h-screen flex items-center justify-center p-4">
+      <section className="max-w-6xl w-full space-y-8" aria-labelledby="projex-heading">
+        <header className="text-center space-y-4">
+          <h1
+            id="projex-heading"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold"
+          >
+            Tudo o que você precisa para gerenciar seus projetos
+          </h1>
+          <p
+            className="text-sm sm:text-base max-w-2xl mx-auto"
+            aria-describedby="projex-description"
+          >
+            O Projex é uma plataforma completa para organizar tarefas, acompanhar o progresso e colaborar em equipe de maneira prática e eficiente.
           </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        </header>
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          role="list"
+          aria-label="Funcionalidades do Projex"
+        >
           {[
             {
-              title: "Integration ecosystem",
+              title: "Integração com ferramentas",
               description:
-                "Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.",
+                "Conecte suas ferramentas favoritas e tenha tudo em um só lugar para aumentar sua produtividade.",
             },
             {
-              title: "Goal setting and tracking",
+              title: "Definição e acompanhamento de metas",
               description:
-                "Define and track your goals, breaking down objectives into achievable tasks to keep your targets in sight.",
+                "Estabeleça objetivos e acompanhe seu progresso, dividindo metas em tarefas alcançáveis.",
             },
             {
-              title: "Secure data encryption",
+              title: "Segurança e privacidade de dados",
               description:
-                "With end-to-end encryption, your data is securely stored and protected from unauthorized access.",
+                "Com criptografia ponta a ponta, seus dados estão seguros e protegidos contra acessos não autorizados.",
             },
           ].map((feature, index) => (
-            <div key={index} className=" p-6 rounded-lg space-y-4">
-              <div className="w-12 h-12  rounded-lg flex items-center justify-center">
+            <article
+              key={index}
+              className="p-6 rounded-lg space-y-4"
+              role="listitem"
+              aria-labelledby={`feature-title-${index}`}
+            >
+              <div
+                className="w-12 h-12 rounded-lg flex items-center justify-center"
+                aria-hidden="true"
+              >
                 <Leaf className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-semibold">{feature.title}</h3>
-              <p className=" text-sm">{feature.description}</p>
-            </div>
+              <h2
+                id={`feature-title-${index}`}
+                className="text-xl font-semibold"
+              >
+                {feature.title}
+              </h2>
+              <p className="text-sm">{feature.description}</p>
+            </article>
           ))}
         </div>
-      </div>
-    </div>
-  )
+      </section>
+    </main>
+  );
 }
