@@ -25,15 +25,22 @@ export const Register = () => {
 
   return (
     <Form {...form}>
-      <form className="flex h-full w-96 flex-col justify-center space-y-4">
-        <div className="mb-4 text-center">
-          <h2 className="mb-2 text-2xl font-medium text-black/70 hover:text-[#1F3473]">
+      <form
+        className="flex h-full w-96 flex-col justify-center space-y-4"
+        aria-labelledby="formulario-de-cadastro"
+        role="form"
+      >
+        <aside className="mb-4 text-center">
+          <h2 className="mb-6 md:text-4xl text-3xl font-medium text-black/70 hover:text-[#1F3473]">
             Registrar
           </h2>
-          <p className="text-black/80 hover:text-[#1F3473]">
+          <p
+            className="text-xl text-black/80 hover:text-[#1F3473]"
+            id="cadastro-form-description"
+          >
             Preencha os campos abaixo para criar uma conta.
           </p>
-        </div>
+        </aside>
         <>
           {registerFields.map((item, index) => (
             <CustomInput
@@ -47,11 +54,21 @@ export const Register = () => {
             />
           ))}
         </>
-        <Button className="w-full bg-[#121313] hover:bg-[#1F3473]  shadow-[0px_0px_12px_#8c45ff] hover:shadow-[0px_0px_20px_#8c45ff] text-white">
+        <Button
+          className="w-full bg-[#121313] hover:bg-[#1F3473]  shadow-[0px_0px_12px_#8c45ff] hover:shadow-[0px_0px_20px_#8c45ff] text-white"
+          aria-label="clique para fazer cadastro"
+          role="button"
+        >
           Registrar
         </Button>
         <div className="mt-16 flex w-full justify-center text-black/70 hover:text-[#1F3473]">
-          <Link href="/sign-in" className="font-bold hover:underline">
+          <Link
+            href="/sign-in"
+            className="font-bold hover:underline"
+            role="link"
+            rel="noopener noreferrer"
+            title="Entrar na conta"
+          >
             Já tem uma conta? Faça login
           </Link>
         </div>

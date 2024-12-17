@@ -19,15 +19,25 @@ export const Login = () => {
 
   return (
     <Form {...form}>
-      <form className="flex h-full w-96 flex-col justify-center space-y-4">
-        <div className="mb-4 text-center">
-          <h2 className="mb-2 text-2xl font-medium text-black/70 hover:text-[#1F3473]">
+      <form
+        className="flex h-full w-96 flex-col justify-center space-y-4"
+        aria-labelledby="formulario-de-login"
+        role="form"
+      >
+        <aside className="mb-4 text-center">
+          <h2
+            className="mb-2 md:text-4xl text-3xl font-medium text-black/70 hover:text-[#1F3473]"
+            id="login-form"
+          >
             Login
           </h2>
-          <p className="text-black/80 hover:text-[#1F3473]">
+          <p
+            className="text-2xl text-black/80 hover:text-[#1F3473]"
+            id="login-form-description"
+          >
             Seja Bem vindo(a) novamente
           </p>
-        </div>
+        </aside>
         <>
           {registerFields.map((item, index) => (
             <CustomInput
@@ -42,16 +52,26 @@ export const Login = () => {
           ))}
           <Link
             href="/forgot"
-            className="self-end  text-black/70 hover:text-[#1F3473] hover:underline"
+            rel="noopener noreferrer"
+            title="recuperar senha"
+            className="self-end text-xl  text-black/70 hover:text-[#1F3473] hover:underline"
+            role="link"
           >
             Esqueceu a senha?
           </Link>
         </>
-        <Button className="w-full bg-[#121313] hover:bg-[#1F3473]  shadow-[0px_0px_12px_#8c45ff] hover:shadow-[0px_0px_20px_#8c45ff] text-white">
+        <Button
+          className="w-full bg-[#121313] hover:bg-[#1F3473]  shadow-[0px_0px_12px_#8c45ff] hover:shadow-[0px_0px_20px_#8c45ff] text-white  "
+          aria-label="clique para fazer login"
+          role="button"
+        >
           Logar
         </Button>
-        <div className="mt-16 flex w-full justify-center text-black/70 hover:text-[#1F3473]">
-          <Link href="/sign-up" className="font-bold hover:underline">
+        <div
+          className="mt-16 flex w-full justify-center text-black/70 hover:text-[#1F3473]"
+          role="contentinfo"
+        >
+          <Link href="/sign-up" className="font-bold hover:underline" role="link" rel="noopener noreferrer" title="Criar a conta">
             Não possui conta?Criar conta
           </Link>
         </div>
