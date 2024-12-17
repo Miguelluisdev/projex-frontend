@@ -1,12 +1,11 @@
 import { Footer } from "@/shared/components/footer"
 import { Header } from "@/shared/components/header"
-import { CallToAction } from "@/subdomains/home/components/call-to-action"
-import { CardInfo } from "@/subdomains/home/components/card-info"
+import { CardInfo } from "../subdomains/home/index"
 import Faq from "@/subdomains/home/components/faq"
-import { HeroSection } from "@/subdomains/home/components/hero"
-import { LogoTicker } from "@/subdomains/home/components/logo-ticker"
-import { ProductShowcase } from "@/subdomains/home/components/product-showcase"
-import Image from "next/image"
+import { HeroSection } from "../subdomains/home/index"
+import { LogoTicker } from "../subdomains/home/index"
+import { ProductShowcase } from "../subdomains/home//index"
+import { CallToAction } from "../subdomains/home/index"
 
 export default function Home() {
   return (
