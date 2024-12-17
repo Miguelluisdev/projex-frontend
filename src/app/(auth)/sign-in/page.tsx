@@ -12,9 +12,9 @@ const SignIn = () => {
         className="h-screen hidden lg:block object-cover"
         alt="Imagem futura de projetos"
       />
-      <div className="flex flex-grow items-center justify-center px-5 md:px-0">
+      <section className="flex flex-grow items-center justify-center px-5 md:px-0">
         <Login />
-      </div>
+      </section>
     </main>
   )
 }

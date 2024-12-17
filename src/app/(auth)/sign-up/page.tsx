@@ -4,9 +4,9 @@ import { Register } from "@/subdomains/auth/components/register"
 const SignUp = () => {
   return (
     <main className="flex h-screen w-full">
-      <div className="flex flex-grow items-center justify-center px-5 md:px-0">
+      <section className="flex flex-grow items-center justify-center px-5 md:px-0">
         <Register />
-      </div>
+      </section>
       <CustomImage
         src="/cadastro.png"
         width={800}
