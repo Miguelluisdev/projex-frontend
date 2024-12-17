@@ -11,22 +11,32 @@ import React from "react"
 import { CustomFieldsProps } from "../@types/custom-fields"
 
 const CustomInput = (props: CustomFieldsProps) => {
+  const { name, label, className, control, ...rest } = props
+
   return (
     <>
       <FormField
-        control={props.control}
-        name={props.name || ""}
-        render={({ field }) => (
+        control={control}
+        name={name || ""}
+        render={({ field, fieldState }) => (
           <FormItem>
-            <FormLabel className="text-black">{props.label}</FormLabel>
+            <FormLabel className="text-black text-lg" htmlFor={name}>
+              {label}
+            </FormLabel>
             <FormControl>
               <Input
-                {...props}
-                className={cn("", props.className)}
+                id={name}
+                aria-labelledby={`${name}-label`}
+                aria-describedby={`${name}-description`}
+                aria-invalid={fieldState.invalid}
+                aria-required
+                aria-placeholder={`${name}`}
+                {...rest}
+                className={cn("", className)}
                 {...field}
               />
             </FormControl>
-            <FormMessage />
+            <FormMessage id={`${name}-description`} />
           </FormItem>
         )}
       />
