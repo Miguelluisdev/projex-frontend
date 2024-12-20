@@ -43,12 +43,8 @@ export const data = {
       isActive: true,
       items: [
         {
-          title: "Cromometro",
-          url: "/dashboard/cronometer",
-        },
-        {
           title: "Projetos",
-          url: "/dashboard/projects",
+          url: "/dashboard/projetos",
         },
         {
           title: "Graficos",
@@ -84,18 +80,6 @@ export const data = {
           title: "Introduction",
           url: "/dashboard/introduction",
         },
-        {
-          title: "Get Started",
-          url: "/dashboard/started",
-        },
-        {
-          title: "Tutorials",
-          url: "/dashboard/tutorials",
-        },
-        {
-          title: "Changelog",
-          url: "/dashboard/changelog",
-        },
       ],
     },
     {
@@ -110,10 +94,6 @@ export const data = {
         {
           title: "Usuarios",
           url: "/dashboard/users",
-        },
-        {
-          title: "Projetos",
-          url: "/dashboard/projects",
         },
       ],
     },
