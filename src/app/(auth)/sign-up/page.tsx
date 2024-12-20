@@ -9,7 +9,7 @@ const SignUp = () => {
       </section>
       <CustomImage
         src="/cadastro.png"
-        width={800}
+        width={900}
         height={1080}
         quality={100}
         className="h-screen hidden lg:block object-cover"
