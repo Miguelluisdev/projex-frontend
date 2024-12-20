@@ -14,19 +14,24 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 import { ChevronRight } from "lucide-react"
-
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { data } from "../data/navlink-sidebar"
 
 const SidePlataform = () => {
+  const pathname = usePathname()
+
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Platforma</SidebarGroupLabel>
+      <SidebarGroupLabel>Plataforma</SidebarGroupLabel>
       <SidebarMenu>
         {data.navMain.map((item) => (
           <Collapsible
             key={item.title}
             asChild
-            defaultOpen={item.isActive}
+            defaultOpen={item.items?.some(
+              (subItem) => subItem.url === pathname,
+            )}
             className="group/collapsible"
           >
             <SidebarMenuItem>
@@ -42,9 +47,19 @@ const SidePlataform = () => {
                   {item.items?.map((subItem) => (
                     <SidebarMenuSubItem key={subItem.title}>
                       <SidebarMenuSubButton asChild>
-                        <a href={subItem.url}>
+                        <Link
+                          href={subItem.url}
+                          rel="noopener noreferrer"
+                          title={subItem.url}
+                          role="navigation"
+                          className={`link ${
+                            pathname === subItem.url
+                              ? "text-blue-500 font-bold"
+                              : ""
+                          }`}
+                        >
                           <span>{subItem.title}</span>
-                        </a>
+                        </Link>
                       </SidebarMenuSubButton>
                     </SidebarMenuSubItem>
                   ))}
