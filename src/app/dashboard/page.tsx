@@ -1,8 +1,8 @@
 
 const Dashboard = () => {
   return (
-    <main className="w-screen h-screen flex flex-col">
-    
+    <main className="w-lvw h-dvh flex flex-col">
+      
     </main>
   )
 }
