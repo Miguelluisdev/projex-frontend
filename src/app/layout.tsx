@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
+  generator: "Next.js",
+  referrer: "origin-when-cross-origin",
   title: {
     default: "Projex",
     template: "Gerenciador de projetos pessoais",
@@ -17,6 +19,26 @@ export const metadata: Metadata = {
     url: "http://localhost:3000",
     siteName: "Projex",
   },
+  metadataBase: new URL("http://localhost:3000"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      br: "/pt-BR",
+    },
+  },
+  formatDetection: {
+    email: true,
+    address: false,
+    telephone: false,
+  },
+  verification: {
+    google: 'google',
+    yandex: 'yandex',
+    yahoo: 'yahoo',
+    other: {
+      me: ['my-email', 'my-link'],
+    },
+  },
 }
 
 export default function RootLayout({
@@ -26,7 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#EAEEFE] text-black/70  antialiased`}>
+      <body
+        className={`${inter.className} bg-[#FFFFF] text-black/70  antialiased`}
+      >
         {children}
       </body>
     </html>
