@@ -29,7 +29,6 @@
 5. 📄 [Estrutura do Projeto](#estrutura)
 6. 🌟 [Funcionalidades Futuras](#futuras)
 7. 🤝 [Contribuição](#contribuicao)
-8. 👥 [Autores](#autores)
 
 ---
 
@@ -139,26 +138,6 @@ git commit -m "Adicionei nova funcionalidade"
 git push origin feature/sua-feature
 ```
 5. Abra um Pull Request.
-
----
-
-## 👥 **Autores** <a name="autores"></a>
-
-<table>
-  <tbody>
-    <tr>
-      <td>
-        <img src="https://avatars.githubusercontent.com/u/173099475?v=4" width="60" style="border-radius: 50%;">
-      </td>
-      <td>Rafael Almeida</td>
-      <td>
-        <a href="https://www.linkedin.com/in/orafael-almeida/" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/orafael-almeida" target="_blank">GitHub</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ---
 
 <div align="center">
