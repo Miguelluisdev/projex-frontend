@@ -37,7 +37,7 @@
 
 O **Projex** é uma plataforma robusta de gerenciamento de projetos que facilita a organização, acompanhamento de tarefas e colaboração entre equipes. Este repositório contém o **Frontend** da aplicação, desenvolvido com tecnologias modernas para garantir performance, escalabilidade e uma excelente experiência do usuário.
 
-<a href="https://github.com/seu-usuario/projex-frontend" target="_blank">
+<a href="https://github.com/Miguelluisdev/projex-frontend" target="_blank">
   <img src="https://img.shields.io/badge/DÊ_UMA_ESTRELA_%E2%AD%90-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 
@@ -53,7 +53,7 @@ O **Projex** é uma plataforma robusta de gerenciamento de projetos que facilita
 
 ---
 
-## 🔋 **Funcionalidades** <a name="funcionalidades"></a>
+## 🔋 **Funcionalidades Futuras** <a name="funcionalidades"></a>
 
 - **Autenticação de Usuários**: Registro, login, recuperação e redefinição de senha.
 - **Gerenciamento de Projetos**: Criação, edição e exclusão de projetos.
@@ -104,12 +104,11 @@ NEXT_PUBLIC_API_KEY=SUA_API_KEY
 ## 📄 **Estrutura do Projeto** <a name="estrutura"></a>
 ```
 /src
-├── components/   # Componentes reutilizáveis
-├── pages/        # Páginas principais
-├── graphql/      # Requisições GraphQL
-├── hooks/        # Hooks personalizados
-├── styles/       # Estilização global
-└── utils/        # Funções auxiliares
+├──  app/        # Paginas e rotas do site
+├── components/  # Componentes do Shadcn
+├── shared/      # componentes que são utilizados varias vezes
+├── hooks/       # Hooks personalizados
+├── subdomain/   # componentes que são utilizados em apenas uma vez
 ```
 
 ---
