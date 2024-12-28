@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="#" target="_blank">
-      <img src="https://github.com/orafael-almeida/readme-projects-template/blob/main/images/banner.png?raw=true" alt="Projex Banner">
+      <img src="/image.png" alt="Projex Banner">
     </a>
   <br />
 
