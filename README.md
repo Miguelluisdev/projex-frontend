@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="#" target="_blank">
-      <img src="/image.png" alt="Projex Banner">
+      <img src="https://github.com/Miguelluisdev/projex-frontend/blob/master/public/image.png" alt="Projex Banner">
     </a>
   <br />
 
