@@ -4,9 +4,9 @@ import { Forgot } from "@/subdomains/auth/components/forgot"
 const ForgotPassword = () => {
   return (
     <main className="flex h-screen w-full">
-      <div className="flex flex-grow items-center justify-center px-5 md:px-0">
+      <section className="flex flex-grow items-center justify-center px-5 md:px-0">
         <Forgot />
-      </div>
+      </section>
       <CustomImage
         src="/forgot.jpg"
         width={800}
