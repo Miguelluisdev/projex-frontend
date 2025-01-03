@@ -1,4 +1,6 @@
+import { Toaster } from "@/components/ui/toaster"
 import { inter } from "@/shared/fonts/inter"
+import Provider from "@/shared/provider/provider"
 import type { Metadata } from "next"
 import "./globals.css"
 
@@ -32,11 +34,11 @@ export const metadata: Metadata = {
     telephone: false,
   },
   verification: {
-    google: 'google',
-    yandex: 'yandex',
-    yahoo: 'yahoo',
+    google: "google",
+    yandex: "yandex",
+    yahoo: "yahoo",
     other: {
-      me: ['my-email', 'my-link'],
+      me: ["my-email", "my-link"],
     },
   },
 }
@@ -51,7 +53,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#FFFFF] text-black/70  antialiased`}
       >
-        {children}
+        <Provider>{children}</Provider>
+        <Toaster />
       </body>
     </html>
   )
