@@ -4,23 +4,16 @@ import { Form } from "@/components/ui/form"
 import CustomInput from "@/shared/components/custom-input"
 import Link from "next/link"
 import React from "react"
-import { useForm } from "react-hook-form"
 import { AuthFields } from "../fields/auth-fields"
+import { useCreateUser } from "../hooks/create-user"
 
 export const Register = () => {
-  const form = useForm({
-    defaultValues: {
-      name: "",
-      email: "",
-      password: "",
-    },
-  })
+ const {form , handleCreateUser} = useCreateUser()
 
   const registerFields = [
     AuthFields[0],
     AuthFields[1],
     AuthFields[2],
-    AuthFields[3],
   ]
 
   return (
@@ -29,6 +22,7 @@ export const Register = () => {
         className="flex h-full w-96 flex-col justify-center space-y-4"
         aria-labelledby="formulario-de-cadastro"
         role="form"
+        onSubmit={form.handleSubmit(handleCreateUser)}
       >
         <aside className="mb-4 text-center">
           <h2 className="mb-6 md:text-4xl text-3xl font-medium text-black/70 hover:text-[#1F3473]">
@@ -55,13 +49,13 @@ export const Register = () => {
           ))}
         </>
         <Button
-          className="w-full bg-[#121313] hover:bg-[#1F3473]  shadow-[0px_0px_12px_#8c45ff] hover:shadow-[0px_0px_20px_#8c45ff] text-white"
+          className="w-full mt-12 bg-[#121313] hover:bg-[#1F3473]  text-white"
           aria-label="clique para fazer cadastro"
           role="button"
         >
           Registrar
         </Button>
-        <div className="mt-16 flex w-full justify-center text-black/70 hover:text-[#1F3473]">
+        <div className="mt-18 flex w-full justify-center text-black/70 hover:text-[#1F3473]">
           <Link
             href="/sign-in"
             className="font-bold hover:underline"

@@ -19,10 +19,10 @@ export const Reset = () => {
     <Form {...form}>
       <form className="flex h-full w-96 flex-col items-center justify-center space-y-4">
         <div className="mb-4 text-center">
-          <h2 className="mb-2 text-2xl font-medium text-black/70 hover:text-[#1F3473]">
+          <h2 className="mb-2 text-3xl font-medium text-black/70 hover:text-[#1F3473]">
             Recuperar senha
           </h2>
-          <p className="text-black/80 hover:text-[#1F3473]">
+          <p className="text-black/80 text-xl hover:text-[#1F3473]">
             Crie uma nova senha para sua conta
           </p>
         </div>
@@ -35,11 +35,11 @@ export const Reset = () => {
               control={form.control}
               key={index}
               type={item.type}
-              className="w-full border-black/50 text-black/70 hover:text-[#1F3473]"
+              className="w-full text-lg p-4 border-black/50 text-black/70 hover:text-[#1F3473]"
             />
           ))}
         </>
-        <Button className="w-full bg-[#121313] hover:bg-[#1F3473]  shadow-[0px_0px_12px_#8c45ff] hover:shadow-[0px_0px_20px_#8c45ff] text-white">
+        <Button className=" w-full bg-[#121313] hover:bg-[#1F3473] text-white">
           Enviar Senha
         </Button>
       </form>

@@ -36,7 +36,7 @@ const CustomInput = (props: CustomFieldsProps) => {
                 {...field}
               />
             </FormControl>
-            <FormMessage id={`${name}-description`} />
+            <FormMessage id={`${name}-description`} className="text-lg" />
           </FormItem>
         )}
       />

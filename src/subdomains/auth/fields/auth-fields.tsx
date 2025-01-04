@@ -2,7 +2,7 @@ import { Formstype } from "../@types/auth-types"
 
 export const AuthFields: Formstype[] = [
   {
-    name: "name",
+    name: "username",
     type: "text",
     placeholder: "Digite seu nome de usuario",
     label: "Nome",
@@ -18,11 +18,5 @@ export const AuthFields: Formstype[] = [
     type: "password",
     placeholder: "Digite sua senha",
     label: "Senha",
-  },
-  {
-    name: "confirm-password",
-    type: "password",
-    placeholder: "confirmar senha",
-    label: " Confirmar senha",
   },
 ]

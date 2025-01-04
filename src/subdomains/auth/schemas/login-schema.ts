@@ -8,5 +8,5 @@ export interface LoginInput {
 
 export const loginSchema = z.object({
   email: LoginSchema.email,
-  package: LoginSchema.password,
+  password: LoginSchema.password,
 })
