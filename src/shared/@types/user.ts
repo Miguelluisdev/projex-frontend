@@ -15,3 +15,12 @@ export type AuthUser = {
   password?: string
   token: string | null
 }
+
+export type ForgotPassword = {
+  email?: string
+}
+
+export type ResetPassword = {
+  email?: string
+  password?: string
+}
