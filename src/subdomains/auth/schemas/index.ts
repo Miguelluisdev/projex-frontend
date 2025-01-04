@@ -35,3 +35,7 @@ export const LoginSchema = {
       },
     ),
 }
+
+export const ForgotSchema = {
+  email: z.string().email({ message: "Por favor insira um e-mail válido" }),
+}

@@ -4,24 +4,23 @@ import { Form } from "@/components/ui/form"
 import CustomInput from "@/shared/components/custom-input"
 import Link from "next/link"
 import React from "react"
-import { useForm } from "react-hook-form"
 import { AuthFields } from "../fields/auth-fields"
+import { useForgotPasswordd } from "../hooks/forgot-pass"
 
 export const Forgot = () => {
-  const form = useForm({
-    defaultValues: {
-      password: "",
-    },
-  })
-
+  const { form, handleForgotPasswordd } = useForgotPasswordd()
   const registerFields = [AuthFields[1]]
 
   return (
     <Form {...form}>
-      <form className="flex h-full w-96 flex-col justify-center space-y-4">
+      <form
+        className="flex h-full w-96 flex-col justify-center space-y-4"
+        role="form"
+        onSubmit={form.handleSubmit(handleForgotPasswordd)}
+      >
         <div className="mb-4 text-center">
           <h2 className="mb-2 text-2xl font-medium text-black/70 hover:text-[#1F3473]">
-            Recuperar enha
+            Recuperar senha
           </h2>
           <p className="text-black/80 hover:text-[#1F3473]">
             Digite seu endereço de e-mail abaixo e enviaremos instruções sobre
@@ -46,7 +45,7 @@ export const Forgot = () => {
         </Button>
         <div className="mt-16 flex w-full justify-center text-black/70 hover:text-[#1F3473]">
           <Link href="/sign-in" className="font-bold hover:underline">
-           Voltar para o Login
+            Voltar para o Login
           </Link>
         </div>
       </form>
