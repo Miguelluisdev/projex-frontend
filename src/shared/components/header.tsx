@@ -1,10 +1,13 @@
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { Buttons } from "./button";
-import { HeaderMobile } from "./header-mobile";
+"use client"
+import { ArrowRight } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import { useAuthToken } from "../hooks/auth-token"
+import { Buttons } from "./button"
+import { HeaderMobile } from "./header-mobile"
 
 export const Header = () => {
+  const isAutehnticated = useAuthToken()
   return (
     <>
       <header className="sticky top-0 backdrop-blur-sm z-20" role="banner">
@@ -12,7 +15,6 @@ export const Header = () => {
           className="flex justify-center items-center py-3 bg-black text-white text-sm"
           aria-label="Promoção"
         >
-          <div className="inline-flex gap-1 items-center"></div>
           <p>
             <span className="text-white/40">Gerencie seus projetos</span>{" "}
             totalmente grátis
@@ -79,9 +81,15 @@ export const Header = () => {
                   </Link>
                 </li>
                 <li role="listitem">
-                  <Link href="/sign-in" id="entrar-link">
-                    <Buttons words="Entrar" />
-                  </Link>
+                  {isAutehnticated ? (
+                    <Link href="/dashboard" id="dashboard-link">
+                      <Buttons words="Dashboard" />
+                    </Link>
+                  ) : (
+                    <Link href="/sign-in" id="entrar-link">
+                      <Buttons words="Entrar" />
+                    </Link>
+                  )}
                 </li>
               </ul>
             </div>
@@ -89,5 +97,5 @@ export const Header = () => {
         </nav>
       </header>
     </>
-  );
-};
+  )
+}
