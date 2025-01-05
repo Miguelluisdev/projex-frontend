@@ -15,7 +15,7 @@
   </div>
 <br/><br/>
  
-  <h1 align="center">Frontend - Projex</h1>
+  <h1 align="center">Frontend - Projex(EM DESENVOLVIMENTO)</h1>
 
    <div align="center">
      Uma plataforma moderna para gerenciamento de projetos.
