@@ -39,3 +39,16 @@ export const LoginSchema = {
 export const ForgotSchema = {
   email: z.string().email({ message: "Por favor insira um e-mail válido" }),
 }
+
+export const ResetSchema = {
+  password: z
+    .string()
+    .min(1, "Por favor insira a senha corretamente")
+    .regex(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+      {
+        message:
+          "A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial.",
+      },
+    ),
+}
