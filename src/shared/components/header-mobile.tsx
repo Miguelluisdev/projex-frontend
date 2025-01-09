@@ -1,67 +1,48 @@
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Triangle } from "lucide-react"
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import { Menu } from "lucide-react"
 import Link from "next/link"
+import { Buttons } from "./button"
 
-interface MobileHeaderProps {
-  isAuthenticated: boolean
-}
-
-export default function MobileHeader({ isAuthenticated }: MobileHeaderProps) {
+export const HeaderMobile = () => {
   return (
-    <nav aria-label="Mobile Navigation" className="md:hidden flex items-center">
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-white"
-            aria-label="Open menu"
-          >
-            <Menu className="h-6 w-6" />
-          </Button>
-        </SheetTrigger>
-        <SheetContent
-          side="right"
-          className="bg-black/95 border-neutral-800"
-          role="dialog"
-          aria-label="Mobile menu"
-        >
-          <div className="flex flex-col space-y-6 mt-8">
-            <Link
-              href="/about"
-              className="text-white hover:text-white/80 transition-colors text-lg"
-            >
-              Sobre
-            </Link>
-            {isAuthenticated ? (
+    <Sheet>
+      <SheetTrigger>
+        <Menu className="h-8 w-8 md:hidden" />
+      </SheetTrigger>
+      <SheetContent className="bg-[#EAEEFE] border-none">
+        <SheetDescription>
+          <div className="">
+            <nav className="flex mt-40 flex-col justify-between items-center gap-8 text-sm ">
+              <a href="" className="text-black hover:text-[#1F3473] transition">
+                Sobre
+              </a>
+              <a href="" className="text-black hover:text-[#1F3473] transition">
+                Avaliações
+              </a>
+              <a href="" className="text-black hover:text-[#1F3473] transition">
+                Desenvolvedores
+              </a>
+              <a href="" className="text-black hover:text-[#1F3473] transition">
+                Projetos
+              </a>
               <Link
-                href="/dashboard"
-                id="dashboard-link"
-                className="text-white hover:text-white/80 transition-colors text-lg"
+                href="/"
+                className="text-black/70 hover:text-[#1F3473] transition"
               >
-                Dashboard
+                Fale com a equipe
               </Link>
-            ) : (
-              <Link
-                href="/sign-in"
-                id="entrar-link"
-                className="text-white hover:text-white/80 transition-colors text-lg"
-              >
-                Entrar
+              <Link href="/sign-in">
+                <Buttons words="Entrar" />
               </Link>
-            )}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white w-fit"
-              aria-label="Toggle theme"
-            >
-              <Triangle className="h-5 w-5 rotate-180" />
-            </Button>
+            </nav>
           </div>
-        </SheetContent>
-      </Sheet>
-    </nav>
+        </SheetDescription>
+      </SheetContent>
+    </Sheet>
   )
 }

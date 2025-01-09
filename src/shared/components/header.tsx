@@ -1,41 +1,101 @@
 "use client"
-
-import { FolderGit2, Triangle } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
 import { useAuthToken } from "../hooks/auth-token"
-import DesktopHeader from "./header-desktop"
-import MobileHeader from "./header-mobile"
+import { Buttons } from "./button"
+import { HeaderMobile } from "./header-mobile"
 
-export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const isAuthenticated = useAuthToken()
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
+export const Header = () => {
+  const isAutehnticated = useAuthToken()
   return (
-    <header
-      className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
-      }`}
-      role="banner"
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center" aria-label="Home">
-            <FolderGit2 className="text-white" />
-          </Link>
-
-          <DesktopHeader isAuthenticated={isAuthenticated} />
-          <MobileHeader isAuthenticated={isAuthenticated} />
+    <>
+      <header className="sticky top-0 backdrop-blur-sm z-20" role="banner">
+        <div
+          className="flex justify-center items-center py-3 bg-black text-white text-sm"
+          aria-label="Promoção"
+        >
+          <p>
+            <span className="text-white/40">Gerencie seus projetos</span>{" "}
+            totalmente grátis
+          </p>
+          <ArrowRight
+            className="h-4 w-4 ml-2 inline-flex justify-center items-center"
+            aria-hidden="true"
+          />
         </div>
-      </div>
-    </header>
+        <nav
+          className="py-5 px-3"
+          role="navigation"
+          aria-label="Menu principal"
+        >
+          <div className="container">
+            <div className="flex items-center justify-between">
+              <Link href="/" aria-label="Voltar à página inicial">
+                <Image
+                  src="/project-management.png"
+                  alt="Logo do site"
+                  width={40}
+                  height={40}
+                />
+              </Link>
+              <HeaderMobile />
+              <ul
+                className="hidden md:flex gap-6 text-black/60 items-center"
+                role="list"
+              >
+                <li role="listitem">
+                  <a
+                    href="#sobre"
+                    id="sobre-link"
+                    className="text-black/70 hover:text-[#1F3473] transition"
+                  >
+                    Sobre
+                  </a>
+                </li>
+                <li role="listitem">
+                  <a
+                    href="#avaliacoes"
+                    id="avaliacoes-link"
+                    className="text-black/70 hover:text-[#1F3473] transition"
+                  >
+                    Avaliações
+                  </a>
+                </li>
+                <li role="listitem">
+                  <a
+                    href="#desenvolvedores"
+                    id="desenvolvedores-link"
+                    className="text-black/70 hover:text-[#1F3473] transition"
+                  >
+                    Desenvolvedores
+                  </a>
+                </li>
+                <li role="listitem">
+                  <Link
+                    href="/#contato"
+                    id="contato-link"
+                    className="text-black/70 hover:text-[#1F3473] transition"
+                  >
+                    Fale com a equipe
+                  </Link>
+                </li>
+                <li role="listitem">
+                  {isAutehnticated ? (
+                    <Link href="/dashboard" id="dashboard-link">
+                      <Buttons words="Dashboard" />
+                    </Link>
+                  ) : (
+                    <Link href="/sign-in" id="entrar-link">
+                      <Buttons words="Entrar" />
+                    </Link>
+                  )}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </>
   )
 }
