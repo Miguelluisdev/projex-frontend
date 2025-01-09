@@ -3,21 +3,24 @@ import { Button } from "@/components/ui/button"
 import { Form } from "@/components/ui/form"
 import CustomInput from "@/shared/components/custom-input"
 import React from "react"
-import { useForm } from "react-hook-form"
 import { AuthFields } from "../fields/auth-fields"
+import { useResetPassword } from "../hooks/reset-pass"
 
-export const Reset = () => {
-  const form = useForm({
-    defaultValues: {
-      password: "",
-    },
-  })
+type ResetProps = {
+  token: string
+}
+
+export const Reset = ({ token }: ResetProps) => {
+  const { form, handleResetPassword } = useResetPassword(token)
 
   const registerFields = [AuthFields[2]]
 
   return (
     <Form {...form}>
-      <form className="flex h-full w-96 flex-col items-center justify-center space-y-4">
+      <form
+        className="flex h-full w-96 flex-col items-center justify-center space-y-4"
+        onSubmit={form.handleSubmit(handleResetPassword)}
+      >
         <div className="mb-4 text-center">
           <h2 className="mb-2 text-3xl font-medium text-black/70 hover:text-[#1F3473]">
             Recuperar senha
