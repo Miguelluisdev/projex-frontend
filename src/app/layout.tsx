@@ -1,4 +1,4 @@
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/sonner"
 import { inter } from "@/shared/fonts/inter"
 import Provider from "@/shared/provider/provider"
 import type { Metadata } from "next"
@@ -53,8 +53,10 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#FFFFF] text-black/70  antialiased`}
       >
-        <Provider>{children}</Provider>
-        <Toaster />
+        <Provider>
+          {children}
+          <Toaster />
+        </Provider>
       </body>
     </html>
   )
