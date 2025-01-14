@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Code } from "lucide-react"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
+
 import React from "react"
 import { MenuItem } from "./side-initial"
 
@@ -18,7 +18,7 @@ type User = {
 }
 
 const SidebarDevelopers = ({ isCollapsed }: { isCollapsed: boolean }) => {
-  const router = useRouter()
+
 
   const user: User = {
     name: "Carlos Nunes",
