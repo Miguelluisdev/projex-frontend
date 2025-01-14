@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export const LogoTicker = () => {
   return (
-    <section className="py-5 bg-white md:py-9">
+    <section className="py-5 sm:mb-10 md:mb-10  bg-white md:py-9">
       <div className="container">
         <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
           <motion.div
