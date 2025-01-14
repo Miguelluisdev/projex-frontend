@@ -46,24 +46,6 @@ export const Header = () => {
               >
                 <li role="listitem">
                   <a
-                    href="#sobre"
-                    id="sobre-link"
-                    className="text-black/70 hover:text-[#1F3473] transition"
-                  >
-                    Sobre
-                  </a>
-                </li>
-                <li role="listitem">
-                  <a
-                    href="#avaliacoes"
-                    id="avaliacoes-link"
-                    className="text-black/70 hover:text-[#1F3473] transition"
-                  >
-                    Avaliações
-                  </a>
-                </li>
-                <li role="listitem">
-                  <a
                     href="#desenvolvedores"
                     id="desenvolvedores-link"
                     className="text-black/70 hover:text-[#1F3473] transition"
