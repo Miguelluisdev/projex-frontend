@@ -1,5 +1,5 @@
 import { Toaster } from "@/components/ui/toaster"
-import SideBar from "@/subdomains/dashboard/components/sidebar"
+import { Sidebar } from "@/subdomains/dashboard/components/sidebar/sidebar"
 
 export default function DashboardLayout({
   children,
@@ -7,9 +7,9 @@ export default function DashboardLayout({
   children: React.ReactNode
 }) {
   return (
-    <section className="w-lvw h-dvh flex flex-col">
+    <section className="">
       <nav>
-        <SideBar />
+        <Sidebar />
       </nav>
       <main>{children}</main>
       <Toaster />
